@@ -1,0 +1,117 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body,
+html {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	overflow: hidden;
+}
+
+.container-fluid {
+	overflow: hidden;
+	height: 100vh;
+	width: 100%;
+	background-image: url("img/mumford-bg.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.overlay {
+	overflow: hidden;
+	width: 100%;
+	height: 100vh;
+	background: rgb(0, 0, 0);
+	background: linear-gradient(80deg, rgba(0, 0, 0, 0.7401085434173669) 0%, rgba(0, 0, 0, 0.2359068627450981) 100%);
+}
+
+.show-button {
+	width: 55px;
+	height: 55px;
+
+	position: absolute;
+	top: 80%;
+	left: 50%;
+	display: grid;
+	place-items: center;
+	transform: translateX(-50%);
+	cursor: pointer;
+}
+
+.show-button {
+	top: 80;
+	left: 50;
+	position: absolute;
+	color: white;
+	background-color: #0b0662;
+	display: grid;
+	place-items: center;
+	width: 50px;
+	height: 50px;
+	border-radius: 100px;
+	transform: translate(-50%, -50%);
+	transition: 0.5s ease;
+}
+
+.show-button:hover {
+	background-color: #060078;
+	width: 55px;
+	height: 55px;
+}
+
+.artists {
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+	height: 20vh;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	animation : slideUp 0.5s ease-in both;
+}
+
+
+@keyframes slideDown {
+	0% {
+	  visibility: hidden;
+	  height: 0;
+	}
+  
+
+	100% {
+	  visibility: visible;
+	  height: 20vh;
+	}
+  }
+  
+ @keyframes slideUp {
+	from {
+	  visibility: visible;
+	  height: 20vh;
+	}
+  
+	to {
+	  visibility: hidden;
+	  height: 0;
+	}
+  }
+
+.artist img {
+	width: 150px;
+	height: 150px;
+	border-radius: 100px;
+	animation : slideUp 0,5s ease-in both;
+}
+
+.artist-hidden {
+	animation : slideDown 0.5s ease-in both;
+  }
