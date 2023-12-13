@@ -10,19 +10,23 @@ html {
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
 	align-items: center;
 	overflow: hidden;
 }
 
 .main-section {
 	overflow: hidden;
-	height: 100vh;
+	height: 80vh;
 	width: 100%;
 	background-image: url("img/mumford-bg.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
+	transition: height 0.5s ease;
+}
+
+.main-section:has(.arrow-change){
+	height: 100vh;
 }
 
 .overlay {

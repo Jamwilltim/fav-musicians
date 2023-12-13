@@ -5,3 +5,4 @@ toggleButton.addEventListener("click", () => {
 	artistsSection.classList.toggle("artist-hidden");
 	toggleButton.classList.toggle("arrow-change");
 });
+
