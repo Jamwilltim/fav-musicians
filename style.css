@@ -18,11 +18,12 @@ html {
 	overflow: hidden;
 	height: 80vh;
 	width: 100%;
-	background-image: url("img/mumford-bg.jpg");
+	/*background-image: url("img/mumford-bg.jpg"); */
+	object-fit: cover;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-	transition: height 0.5s ease;
+	transition: height 0.5s ease; 
 }
 
 .main-section:has(.arrow-change){
@@ -30,6 +31,7 @@ html {
 }
 
 .overlay {
+	display: none;
 	position: absolute;
 	z-index: 0;
 	top: 0;
@@ -87,7 +89,7 @@ html {
 
 .artist img {
 	width: 150px;
-	height: 150px;
+	height: auto;
 	border-radius: 100px;
 }
 
@@ -101,4 +103,40 @@ html {
 
 .arrow-change > i {
 	transform: rotateZ(-180deg);
+}
+
+.content.container-fluid{
+	display: grid;
+	background-color: beige;
+	height: 80vh;
+	grid-template-rows: 2fr 5fr 2fr;
+	grid-template-columns: 2.5fr 5fr 3fr;
+}
+
+.content-change{
+	height: 100vh !important;
+}	
+
+.item-1{
+	grid-area : 2/ 1/ 2/-3;
+}
+
+.item-2{
+	grid-area : 1/2/1/-2;
+}
+
+.item-3{
+	grid-area : 2/2/2/-2;
+}
+
+.item-4{
+	grid-area: 3/2/3/-2;
+}
+
+.item-5{
+	grid-area : 1/3/1/4;
+}
+
+.item-6{
+	grid-area: 2/3/2/4;
 }
