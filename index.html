@@ -6,6 +6,7 @@
 		<title>Document</title>
 
 		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -17,7 +18,7 @@
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 		<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 	</head>
-	<body>
+	<body style="background-color: beige;">
 		<nav class="navbar navbar-expand-lg navbar-light" style="background: beige; width:100%">
 			<div class="container-fluid">
 			   <a class="navbar-brand" href="https://www.pokemon.com/uk/pokedex/gengar">
@@ -47,11 +48,64 @@
 
 		<div class="main-section">
 			<div class="container-fluid content" id ="content">
-				<div class="item item-1"></div>
-				<div class="item item-2"></div>
-				<div class="item item-3"></div>
-				<div class="item item-4"></div>	
-				<div class="item item-5"></div>
+
+				<div class="item item-1">
+					<img src="img/tory-lanez.jpg" alt="Tory Lanez" id ="artistImage"/>
+				</div>
+
+				<div class="item item-2">
+					<div class="artist-info">
+						<h1>Tory Lanez</h1>
+						<p>"I CANT TAKE HEARTBREAK FOR SO LONG"</p>
+					</div>
+				</div>
+
+				<div class="item item-3">
+					<div class="container-fluid cards">
+						<div class="cards card-1" id="Card1" ">
+							<div class="front">
+								<h1>Who is Tory Lanez?</h1>
+							</div>
+							<div class="back">
+								<h1>Back of Card</h1>
+								<p>Fill content here</p>
+							</div>
+						</div>
+
+						<div class="cards card-2" id="Card2" >
+							<div class="front">
+								<h1>Content 2</h1>
+							</div>
+							<div class="back">
+								<h1>Back of Card</h1>
+								<p>Fill content here</p>
+							</div>
+						</div>
+						<div class="cards card-3" id="Card3" >
+							<div class="front">
+								<h1>Content 3</h1>
+							</div>
+							<div class="back">
+								<h1>Back of Card</h1>
+								<p>Fill content here</p>
+							</div>
+						</div>
+						<div class="cards card-4" id="Card4">
+							<div class="front">
+								<h1>Content 4</h1>
+							</div>
+							<div class="back">
+								<h1>Back of Card</h1>
+								<p>Fill content here</p>
+							</div>
+						</div>
+							
+					</div>	
+				</div>
+
+
+				<div class="item item-4"></div>
+				<div class="item item-5"></div>	
 				<div class="item item-6"></div>
 			</div>
 			<!-- <div class="overlay"></div> -->
@@ -59,24 +113,35 @@
 		</div>
 		<section class="artists" id="artistsSec">
 			<div class="artist" id="artist">
-				<img src="img/mumford.jpg" alt="mumford and sons" />
-				<h1>Artist's Name</h1>
+				<a href="#" class="Artist-Button">
+					<img src="img/tory-lanez.jpg" alt="Tory Lanez" />
+				</a>
+				<h1>Tory Lanez</h1>
+			</div>
+			
+			<div class="artist" id="artist">
+				<a href="#" class="Artist-Button">
+					<img src="img/tory-lanez.jpg" alt="Tory Lanez" />
+				</a>
+				<h1>Tory Lanez</h1>
 			</div>
 			<div class="artist" id="artist">
-				<img src="img/mumford.jpg" alt="mumford and sons" />
-				<h1>Artist's Name</h1>
+				<a href="#" class="Artist-Button">
+					<img src="img/tory-lanez.jpg" alt="Tory Lanez" />
+				</a>
+				<h1>Tory Lanez</h1>
 			</div>
 			<div class="artist" id="artist">
-				<img src="img/mumford.jpg" alt="mumford and sons" />
-				<h1>Artist's Name</h1>
+				<a href="#" class="Artist-Button">
+					<img src="img/tory-lanez.jpg" alt="Tory Lanez" />
+				</a>
+				<h1>Tory Lanez</h1>
 			</div>
 			<div class="artist" id="artist">
-				<img src="img/mumford.jpg" alt="mumford and sons" />
-				<h1>Artist's Name</h1>
-			</div>
-			<div class="artist" id="artist">
-				<img src="img/mumford.jpg" alt="mumford and sons" />
-				<h1>Artist's Name</h1>
+				<a href="#" class="Artist-Button">
+					<img src="img/tory-lanez.jpg" alt="Tory Lanez" />
+				</a>
+				<h1>Tory Lanez</h1>
 			</div>
 		</section>
 		<script src="client.js"></script>

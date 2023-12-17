@@ -24,6 +24,6 @@ function adjustMainSectionHeight() {
 	content.style.height = `${availableHeight}px`;
   }
   
-  window.addEventListener('load', adjustMainSectionHeight);
+window.addEventListener('load', adjustMainSectionHeight);
+window.addEventListener('resize', adjustMainSectionHeight);
 
-  
