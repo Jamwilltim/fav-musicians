@@ -231,18 +231,18 @@ html {
   }
 
 .card-2:hover {
-cursor: pointer;
-transform: rotateY(180deg);
+	cursor: pointer;
+	transform: rotateY(180deg);
 }
 
 .card-3:hover {
-cursor: pointer;
-transform: rotateY(180deg);
+	cursor: pointer;
+	transform: rotateY(180deg);
 }
 
 .card-4:hover {
-cursor: pointer;
-transform: rotateY(180deg);
+	cursor: pointer;
+	transform: rotateY(180deg);
 }
 
 .front,
@@ -265,13 +265,45 @@ transform: rotateY(180deg);
 }
 
 .back{
-	background-color: #3a3a3a;
+	background-color: #0C0404;
+	color: white;	
 	transform: rotateY(180deg);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	gap: 2rem;
+}
+
+
+
+/* * {
+	scrollbar-width: auto;
+	scrollbar-color: #080808 #ffffff;
+}
+
+
+*::-webkit-scrollbar {
+	width: 2px;
+}
+
+*::-webkit-scrollbar-track {
+	background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: #080808;
+	border-radius: 2rem;
+	border: 0px none #ffffff;
+} */
+
+.back h1{
+	font-size: 1.8rem;
+}
+
+.back p{
+	padding: 10px;
+	overflow: auto;	
 }
 
 .rightside.container-fluid{
