@@ -85,6 +85,10 @@ html {
 	transform: translateY(0%);
 }
 
+.Artist-Button {
+	background-color: black;	
+	border: none;
+}
 .Artist-Button:hover img {
     width: 155px; 
     transition: width 0.5;
@@ -240,6 +244,8 @@ html {
 	transform: rotateY(180deg);
 }
 
+
+
 .card-4:hover {
 	cursor: pointer;
 	transform: rotateY(180deg);
@@ -305,6 +311,8 @@ html {
 	padding: 10px;
 	overflow: auto;	
 }
+
+
 
 .rightside.container-fluid{
 	margin-left: 2px;
