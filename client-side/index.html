@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
+		<title>J's Top Artists</title>
 
 		<link rel="stylesheet" href="style.css" />
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
@@ -28,8 +28,8 @@
 				<span class="navbar-toggler-icon"></span>
 			  </button>
 			  <div class="collapse navbar-collapse" id="navbarNav">
-				<form class="d-flex" role="search">
-					<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+				<form class="d-flex" role="search" id="searchform">
+					<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="artisttofind">
 					<button class="btn btn-outline-dark" type="submit">Search</button>
 				</form>
 				<ul class="navbar-nav ms-auto">
@@ -120,11 +120,11 @@
 						</div>
 
 						<div class="rightside rightside-2">
-							<form class="comments">
+							<form class="comments" id ="commentsform">
 								<input type="text" id="comment-input" placeholder="Comments&#128578" />
 								<button type="submit" id="comment">Post Comment</button>
 							</form>
-							<div class="box-content"></div>
+							<div class="box-content" id="commentbox"></div>
 						</div>
 
 					</div>
@@ -169,7 +169,8 @@
 		</section>
 
 		<script src="client.js"></script>
-		<script src="Temp-Comment-Button.js"></script>
+		<script src="load.js"></script>
 		<script src="resizing.js"></script>
+		<script src="comment-submit.js"></script>
 	</body>
 </html>
