@@ -34,6 +34,8 @@
 				</form>
 				<ul class="navbar-nav ms-auto">
 				  <li class="nav-item">
+					<button class="nav-link" id="addArtist"><i class="fa fa-plus"></i></button>
+				  <li class="nav-item">
 					<a class="nav-link active" aria-current="page" href="https://open.spotify.com/user/6j88melujwh7kaj3jontblrry?si=1a42b82031ca4c16"><i class="fa-brands fa-spotify"></i></a>
 				  </li>
 				  <li class="nav-item">
@@ -62,9 +64,46 @@
 						<h1 id="ArtistNameHeader">Tory Lanez</h1>
 						<p id = "Quote">"I CANT TAKE HEARTBREAK FOR SO LONG"</p>
 					</div>
+					<div class="form-hidden">
+						<h1>Add a New Artist</h1>
+						<p>Please fill in the form down below</p>
+					</div>
 				</div>
 
 				<div class="item item-3">
+					<div class="form-fill">
+						<form id="artistForm" style="width:100%; height:100%;">
+							<div class="form-unhidden">
+								<div class="form-textinput">
+									<label for="ArtistName">Artist Name:</label><br>
+									<input type="text" name="ArtistName"><br>
+								
+									<label for="CoverImage">Artist Picture URL:</label><br>
+									<input type="text" name="CoverImage"><br>
+								
+									<label for="SpotifyURL">Spotify URL:</label><br>
+									<input type="text" name="SpotifyURL"><br>
+								
+									<label for="Card3A">Artist Albums:</label><br>
+									<input type="text" name="Card3A" placeholder="Separate albums with commas"><br>
+								
+									<label for="Card4">Top 5 Songs:</label><br>
+									<input type="text" name="Card4" placeholder="Separate songs with commas"><br>
+								</div>
+								
+								<div class="form-textarea">
+									<label for="Card1">Who is the Artist:</label><br>
+									<textarea name="Card1"></textarea><br>
+								
+									<label for="Card2">Rise to Popularity:</label><br>
+									<textarea name="Card2"></textarea><br>
+
+									<button type="submit" id="form-button">Submit</button>
+								</div>
+							</div>
+						</form>
+					</div>
+					
 					<div class="container-fluid cards">
 						<div class="cards card-1" id="Card1" >
 							<div class="front" id="Card1-front">
