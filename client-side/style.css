@@ -279,6 +279,7 @@ html {
 	justify-content: center;
 	align-items: center;
 	gap: 2rem;
+	overflow: auto;
 }
 
 
@@ -378,7 +379,7 @@ html {
 	background-color: black;
 }
 
-.form-hidden{
+.hidden{
 	display:none;
 }
 

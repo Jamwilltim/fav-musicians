@@ -9,6 +9,8 @@ form2.addEventListener("submit", async function (event){
     formData.append('Comment', Comment);
     const dataJson  = JSON.stringify(Object.fromEntries(formData.entries()));
     console.log(dataJson)
+    document.getElementById("comment-input").value = '';
+
     try{
         const response = await fetch('http://127.0.0.1:8080/add-comments', {
             method: 'POST',
@@ -20,7 +22,15 @@ form2.addEventListener("submit", async function (event){
         if (!response.ok){
             throw new Error("Respond Status is" + response.status)
         }
+
+        const commenttt = await response.json();
+        const commentbox = document.getElementById("commentbox");
+        const newComment = document.createElement('p');
+        newComment.innerHTML = commenttt.Comment;
+        commentbox.appendChild(newComment);
+
+
     } catch (error) {
         alert(error);
     }
-})
+});

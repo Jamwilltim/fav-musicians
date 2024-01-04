@@ -25,6 +25,12 @@ app.get('/artist', function(req,resp){
 
 });
 
+app.get('/artist-info.json', function(req,resp){
+    resp.send(artistinfo);
+});
+
+
+
 app.post('/add-comments', function(req,resp){
     const Comment = req.body.Comment;
     const ArtistName = req.body.ArtistName;
@@ -35,10 +41,28 @@ app.post('/add-comments', function(req,resp){
     } else {
         artisttofind.Comments.push(Comment);
         fs.writeFileSync('./artist-info.json', JSON.stringify(artistinfo));
+        console.log(req.body)
         resp.send(req.body);
     }
 });
 
+app.post('/add-artist', function(req,resp){
+    const newArtist = {
+        ArtistName: req.body.ArtistName.trim(),
+        Quote: req.body.Quote.trim(),
+        CoverImage: req.body.CoverImage.trim(),
+        SpotifyURL: req.body.SpotifyURL.trim(),
+        Card3A: req.body.Card3A.split(',').map(s => s.trim()),
+        Card4: req.body.Card4.split(',').map(s => s.trim()),
+        Card1: req.body.Card1.trim(),
+        Card2: req.body.Card2.trim(),
+        Comments: []
+    };
+
+    artistinfo.push(newArtist);
+    fs.writeFileSync('./artist-info.json', JSON.stringify(artistinfo));
+    resp.send(newArtist);
+});
 
 module.exports = app;
 
