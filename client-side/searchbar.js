@@ -28,8 +28,8 @@ form.addEventListener("submit", async function (event){
         let body = await response.json();
         const {ArtistName, Quote, CoverImage, SpotifyUrl, Card3A, Card4, Card1, Card2, Comments} = body
         document.getElementById('Card1-front').querySelector('h1').innerHTML = `Who is ${ArtistName}?`;
-        document.getElementById('Card1-back').innerHTML = Card1;
-        document.getElementById('Card2-back').innerHTML = Card2;
+        document.getElementById('Card1-back').innerHTML = '<p>' + Card1 + '</p>';
+        document.getElementById('Card2-back').innerHTML = '<p>' + Card2 + '</p>';
         document.getElementById('Card1-back').style.padding = '10px';
         document.getElementById('Card2-back').style.padding = '10px';
         document.getElementById('Card3-back').querySelector('ul').innerHTML = makeList(Card3A);
