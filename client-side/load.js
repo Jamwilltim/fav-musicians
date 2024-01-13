@@ -5,7 +5,10 @@ window.addEventListener('load', async () => {
             throw new Error("Response Status is" + response.status);
         }
         const artists = await response.json();
-        console.log(artists);
+        torylanezcom = artists[0].Comments
+        document.getElementById("commentbox").innerHTML = makeComment(torylanezcom);
+        document.getElementById("commentbox").style.padding = '10px'
+
         for (let artist of artists) {
             const newartistDiv = document.createElement('div');
             newartistDiv.classList.add('artist');
@@ -55,6 +58,9 @@ window.addEventListener('load', async () => {
                 }
             })
         }
+
+
+
     } catch (error) {
         alert(error);
     }
@@ -75,3 +81,30 @@ function makeComment(CommentList){
     }
     return commentcontent;
 }
+
+document.querySelector('.navbar-brand').addEventListener('click', async function(event) {
+    event.preventDefault();
+    try {
+        let homename = "Tory Lanez"
+        let response = await fetch(`http://127.0.0.1:8080/artist?temp=${homename}`);
+        let body = await response.json(); 
+        console.log(body);
+        const {ArtistName, Quote, CoverImage, SpotifyUrl, Card3A, Card4, Card1, Card2, Comments} = body
+        document.getElementById('Card1-front').querySelector('h1').innerHTML = `Who is ${ArtistName}?`;
+        document.getElementById('Card1-back').innerHTML = '<p>' + Card1 + '</p>';
+        document.getElementById('Card2-back').innerHTML = '<p>' + Card2 + '</p>';
+        document.getElementById('Card1-back').style.padding = '10px';
+        document.getElementById('Card2-back').style.padding = '10px';
+        document.getElementById('Card3-back').querySelector('ul').innerHTML = makeList(Card3A);
+        document.getElementById('Card4-back').querySelector('ul').innerHTML = makeList(Card4);
+        document.getElementById('ArtistNameHeader').innerHTML = ArtistName;
+        document.getElementById('artistImage').src = CoverImage;
+        document.getElementById('Quote').innerHTML = Quote;
+        document.getElementById('SpotifyPlaylist').src = SpotifyUrl;
+        document.getElementById("commentbox").innerHTML = makeComment(Comments);
+        document.getElementById("commentbox").style.padding = '10px'
+        
+    } catch (error) {
+        alert(error);
+    }
+});
