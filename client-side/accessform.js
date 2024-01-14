@@ -4,7 +4,7 @@ const item2 = document.getElementById("item2-default");
 const item3 = document.getElementById("item3-default");
 const item6 = document.getElementById("item6-default");
 const artist = document.getElementsByClassName("artist");
-const artistsSec = document.getElementById('artistsSec');
+const artistsSec = document.getElementById("artistsSec");
 const toggleUPDOWNButton = document.getElementById("toggleUPDOWN");
 const arrowfooter = document.getElementById("arrowfooter");
 
@@ -23,7 +23,7 @@ buttonclicked.addEventListener("click", () => {
     arrowfooter.classList.toggle("hidden");
     toggleUPDOWNButton.classList.toggle("hidden");
 
-    for(let i = 0; i < artist.length; i++) {
+    for (let i = 0; i < artist.length; i++) {
         artist[i].classList.toggle("hidden");
     }
 });
@@ -43,10 +43,10 @@ formbutton.addEventListener("click", () => {
     arrowfooter.classList.toggle("hidden");
     toggleUPDOWNButton.classList.toggle("hidden");
 
-    for(let i = 0; i < artist.length; i++) {
+    for (let i = 0; i < artist.length; i++) {
         artist[i].classList.remove("hidden");
     }
-})
+});
 
 homebutton.addEventListener("click", () => {
     const formcontainer = document.getElementById("form-container");
@@ -60,8 +60,7 @@ homebutton.addEventListener("click", () => {
     arrowfooter.classList.toggle("hidden");
     toggleUPDOWNButton.classList.toggle("hidden");
     
-
-    for(let i = 0; i < artist.length; i++) {
+    for (let i = 0; i < artist.length; i++) {
         artist[i].classList.remove("hidden");
     }
-})
+});

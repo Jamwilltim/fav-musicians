@@ -1,8 +1,8 @@
 let currentArtist = 0;
-let artists = [] 
+let artists = []; 
 
-const RightArrow = document.getElementById("right-footer-arrow")
-const LeftArrow = document.getElementById("left-footer-arrow")
+const RightArrow = document.getElementById("right-footer-arrow");
+const LeftArrow = document.getElementById("left-footer-arrow");
 
 RightArrow.addEventListener('click', async function (event) {
     try{
@@ -18,8 +18,8 @@ RightArrow.addEventListener('click', async function (event) {
         }
 
         actualArtist = artists[currentArtist].ArtistName;
-        let response2 = await fetch(`http://127.0.0.1:8080/artist?temp=${actualArtist}`);
-        let body = await response2.json(); 
+        const response2 = await fetch(`http://127.0.0.1:8080/artist?temp=${actualArtist}`);
+        const body = await response2.json(); 
         const {ArtistName, Quote, CoverImage, SpotifyUrl, Card3A, Card4, Card1, Card2, Comments} = body
         document.getElementById('Card1-front').querySelector('h1').innerHTML = `Who is ${ArtistName}?`;
         document.getElementById('Card1-back').innerHTML = '<p>' + Card1 + '</p>';
@@ -75,4 +75,4 @@ LeftArrow.addEventListener('click', async function (event) {
     } catch (error) {
         alert(error);
     }
-})
+});
